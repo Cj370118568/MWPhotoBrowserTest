@@ -60,7 +60,7 @@
     [super viewDidLoad];
     [self.collectionView registerClass:[MWGridCell class] forCellWithReuseIdentifier:@"GridCell"];
     self.collectionView.alwaysBounceVertical = YES;
-    self.collectionView.backgroundColor = [UIColor blackColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -122,7 +122,7 @@
 #pragma mark - Layout
 
 - (CGFloat)getColumns {
-    if ((UIInterfaceOrientationIsPortrait(self.interfaceOrientation))) {
+    if ((UIInterfaceOrientationIsPortrait(self.preferredInterfaceOrientationForPresentation))) {
         return _columns;
     } else {
         return _columnsL;
@@ -130,7 +130,7 @@
 }
 
 - (CGFloat)getMargin {
-    if ((UIInterfaceOrientationIsPortrait(self.interfaceOrientation))) {
+    if ((UIInterfaceOrientationIsPortrait(self.preferredInterfaceOrientationForPresentation))) {
         return _margin;
     } else {
         return _marginL;
@@ -138,7 +138,7 @@
 }
 
 - (CGFloat)getGutter {
-    if ((UIInterfaceOrientationIsPortrait(self.interfaceOrientation))) {
+    if ((UIInterfaceOrientationIsPortrait(self.preferredInterfaceOrientationForPresentation))) {
         return _gutter;
     } else {
         return _gutterL;
